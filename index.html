@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Study</title>
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" href="apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Study">
+<meta name="theme-color" content="#FBBF24">
+<style>
+:root{
+  --ink:#241C12; --ink-soft:#6B5D49;
+  --shadow:0 14px 34px rgba(60,42,20,.18);
+}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html{-webkit-text-size-adjust:100%}
+body{
+  font-family:ui-rounded,"SF Pro Rounded",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+  color:var(--ink);
+  min-height:100vh; min-height:100dvh;
+  background:linear-gradient(165deg,#FDE68A 0%,#FBBF24 42%,#FB7185 100%);
+  background-attachment:fixed;
+  display:flex; align-items:center; justify-content:center;
+  padding:calc(env(safe-area-inset-top) + 28px) 20px calc(env(safe-area-inset-bottom) + 28px);
+}
+.wrap{width:100%;max-width:480px}
+.head{text-align:center;margin-bottom:30px}
+.head .cap{font-size:56px;line-height:1;filter:drop-shadow(0 4px 8px rgba(60,42,20,.2))}
+h1{font-size:44px;font-weight:800;letter-spacing:-1px;margin-top:10px;color:#3A2A14}
+.sub{font-size:19px;font-weight:600;color:#7A5A28;margin-top:4px}
+
+.card{
+  display:flex; align-items:center; gap:18px;
+  width:100%; text-decoration:none; color:#fff;
+  border-radius:28px; padding:24px; margin-bottom:20px;
+  box-shadow:var(--shadow); transition:transform .09s ease, box-shadow .15s ease;
+}
+.card:active{transform:scale(.975)}
+.card .emoji{
+  font-size:46px; width:78px; height:78px; flex:0 0 78px;
+  display:flex; align-items:center; justify-content:center;
+  background:rgba(255,255,255,.22); border-radius:22px;
+}
+.card .txt{flex:1}
+.card .name{font-size:30px;font-weight:800;letter-spacing:-.3px}
+.card .desc{font-size:16px;font-weight:500;opacity:.92;margin-top:2px}
+.card .go{font-size:30px;font-weight:800;opacity:.85}
+
+.card.science{background:linear-gradient(135deg,#0EA5A0,#15803D)}
+.card.maths{background:linear-gradient(135deg,#4F46E5,#7C3AED)}
+
+.foot{text-align:center;margin-top:14px;color:#7A5A28;font-size:14px;font-weight:600;opacity:.8}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="head">
+      <div class="cap">🎓</div>
+      <h1>Study Time</h1>
+      <p class="sub">Pick a subject to practice</p>
+    </div>
+
+    <a class="card science" href="https://abhkumar81.github.io/science-ascent/">
+      <div class="emoji">🔬</div>
+      <div class="txt">
+        <div class="name">Science</div>
+        <div class="desc">Climb the grades, question by question</div>
+      </div>
+      <div class="go">›</div>
+    </a>
+
+    <a class="card maths" href="https://abhkumar81.github.io/math-sprint/">
+      <div class="emoji">✖️</div>
+      <div class="txt">
+        <div class="name">Maths</div>
+        <div class="desc">5-minute multiplication sprints</div>
+      </div>
+      <div class="go">›</div>
+    </a>
+
+    <p class="foot">You've got this! 🌟</p>
+  </div>
+</body>
+</html>
